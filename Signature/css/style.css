@@ -1598,7 +1598,7 @@ header.header-mobile.header-center #logo-center{
 /* ================================================== */
 
 section {
-  padding: 140px 0 140px 0;
+  padding: 90px 0 90px 0;
 }
 
 #content.zebra section:nth-child(even) {
@@ -1689,6 +1689,12 @@ section.text-light.lines-deco:after{
   -moz-border-radius:50% 50% 0 0;
   -webkit-border-radius:50% 50% 0 0;
 }
+
+/* .rounded-up-100{
+  border-radius:100% 100% 0% 100% / 100% 100% 0% 100%  !important;
+  -moz-border-radius:50% 50% 0 0;
+  -webkit-border-radius:50% 50% 0 0;
+} */
 
 .rounded-down-100{
   border-radius:0 0 50% 50%;
@@ -1785,7 +1791,7 @@ section.text-light.lines-deco:after{
 footer {
   color: var(--dark-body-font-color);
   background: var(--bg-dark-1);
-  padding: 100px 0 0 0;
+  padding: 50px 0 0 0;
 }
 
 footer.footer-light {
@@ -1825,11 +1831,14 @@ footer a {
 }
 
 .subfooter {
-  margin-top: 80px;
+  margin-top: 40px;
   border-top: solid 1px rgba(255, 255, 255, .1);
   padding: 20px 0 20px 0;
 }
-
+.subfooter .container,footer .container{
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
 .footer-light .subfooter {
   border-top: solid 1px rgba(0, 0, 0, .1);
 }
@@ -1930,9 +1939,10 @@ header.s2 #mainmenu>li>a {
 
 header.header-mobile {
   position: fixed !important;
-  background: var(--title-font-color);
+  background: transparent;
+  backdrop-filter: blur(20px);
   top: 0;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 
 header.header-mobile.logo-center {
@@ -7507,13 +7517,14 @@ ol.ol-style-1.dark li::before{
   text-align: center;
   font-size: 16px;
   margin: 0 3px 0 3px;
-  border-radius:50% 50% 0 0;
-  -moz-border-radius:50% 50% 0 0;
-  -webkit-border-radius:50% 50% 0 0;
+  border-radius:100% 100% 100% 100% / 100% 100% 0% 100% ;
+  -moz-border-radius:100% 100% 100% 100% / 100% 100% 0% 100%; 
+  -webkit-border-radius:100% 100% 100% 100% / 100% 100% 0% 100% ;
 }
 
 .dark-scheme .social-icons i {
-  background: rgba(255, 255, 255, .1);
+  background: rgba(22, 39, 80,0.1);
+  color: white;
 }
 
 .social-icons i.fa-google-plus {
@@ -7527,7 +7538,7 @@ ol.ol-style-1.dark li::before{
 .social-icons i:hover {
   background: #fff;
   border-color: #eceff3;
-  color: #333;
+  color: #162750;
 }
 
 .social-icons.big a{
@@ -13217,7 +13228,7 @@ i.bg-color-secondary {
 
 .gradient-trans-white-bottom{ background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); }
 .gradient-trans-black-bottom{ background: linear-gradient(180deg, rgba(var(--bg-dark-1-rgb),0) 0%, rgba(var(--bg-dark-1-rgb),1) 100%); }
-.gradient-trans-color-bottom{ background: linear-gradient(180deg, rgba(var(--primary-color-rgb),0) 0%, rgba(var(--primary-color-rgb),1) 100%); }
+.gradient-trans-color-bottom{ background: linear-gradient(180deg, rgba(22, 39, 80,0) 0%, rgba(22, 39, 80,0.5) 100%); }
 
 /* z-index */
 .z-1{z-index: 1}
@@ -13378,15 +13389,41 @@ input.text-center{
   line-height: 1.5em;
 }
 
-.box-slider-decor{
+.box-slider-decor {
+  position: relative;
   width: 100%;
   padding-top: 100%;
   backdrop-filter: blur(20px);
-  border-radius:100% 100% 0 0;
-  -moz-border-radius:100% 100% 0 0;
-  -webkit-border-radius:100% 100% 0 0;
-  border: solid 2px var(--primary-color);
+  border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+  border: solid 0px var(--primary-color);
+  overflow: hidden;
+  transform: rotate(45deg);
 }
+
+.box-slider-decor::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/Signature-Fav-icon-bg.png) center center / contain no-repeat;
+  opacity: 0.5; /* Adjust opacity here */
+  z-index: -1;
+  transform: rotate(-45deg);
+
+}
+
+
+/* .shape-mask-1{
+  width: 100%;
+  padding-top: 100%;
+  backdrop-filter: blur(20px);
+  border-radius:100% 100% 0% 100% / 100% 100% 0% 100% ;
+  -moz-border-radius:100% 100% 0% 100% / 100% 100% 0% 100% ;
+  -webkit-border-radius:100% 100% 0% 100% / 100% 100% 0% 100% ;
+  overflow: hidden;
+} */
 
 .shape-mask-1{
   width: 100%;
@@ -20889,6 +20926,8 @@ border-radius:20px 0 0 20px;
 
   header .container {
     min-width: 100%;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
   }
 
   .pricing-2-col .pricing-box,
@@ -20907,6 +20946,8 @@ border-radius:20px 0 0 20px;
   .container {
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
 
   .feature-box-image,
@@ -21245,4 +21286,19 @@ border-radius:20px 0 0 20px;
 .btn-signature:hover {
   background-color: white;
   color: #162750 !important;
+}
+
+.form-card{
+  background-color: transparent !important;
+  backdrop-filter: blur(20px);
+  color: #162750;
+}
+.form-card label{
+  font-weight: 400 !important;
+}
+.form-card i{
+  color: #162750;
+}
+.num-section{
+  padding: 20px 0;
 }
