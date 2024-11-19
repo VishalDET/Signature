@@ -145,6 +145,7 @@ body {
   padding: 0;
   line-height: 1.7em;
   word-spacing: 0px;
+  padding: 0 !important;
 }
 
 .body-font{
