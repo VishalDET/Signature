@@ -939,7 +939,7 @@
                                             <span class="input-group-text">
                                                 <i class="fas fa-user"></i>
                                             </span>
-                                            <input type="text" class="form-control" id="name" name="name" required style="border: 1px solid #dee2e6; transition: border-color 0.15s ease-in-out;" onfocus="this.style.borderColor='#162750'" onblur="this.style.borderColor='#dee2e6'">
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Please Enter your name" required style="border: 1px solid #dee2e6; transition: border-color 0.15s ease-in-out;" onfocus="this.style.borderColor='#162750'" onblur="this.style.borderColor='#dee2e6'">
                                         </div>
                                     </div>
               
@@ -949,7 +949,7 @@
                                             <span class="input-group-text">
                                                 <i class="fas fa-envelope"></i>
                                             </span>
-                                            <input type="email" class="form-control" id="email" name="email" required style="border: 1px solid #dee2e6; transition: border-color 0.15s ease-in-out;" onfocus="this.style.borderColor='#162750'" onblur="this.style.borderColor='#dee2e6'">
+                                            <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required style="border: 1px solid #dee2e6; transition: border-color 0.15s ease-in-out;" onfocus="this.style.borderColor='#162750'" onblur="this.style.borderColor='#dee2e6'">
                                         </div>
                                     </div>
               
@@ -959,7 +959,7 @@
                                             <span class="input-group-text">
                                                 <i class="fas fa-phone"></i>
                                             </span>
-                                            <input type="tel" class="form-control" id="phone" name="phone" minlength="10" maxlength="10" required style="border: 1px solid #dee2e6; transition: border-color 0.15s ease-in-out;" onfocus="this.style.borderColor='#162750'" onblur="this.style.borderColor='#dee2e6'">
+                                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" minlength="10" maxlength="10" required style="border: 1px solid #dee2e6; transition: border-color 0.15s ease-in-out;" onfocus="this.style.borderColor='#162750'" onblur="this.style.borderColor='#dee2e6'">
                                         </div>
                                     </div>
               
@@ -969,7 +969,7 @@
                                             <span class="input-group-text">
                                                 <i class="fas fa-comment"></i>
                                             </span>
-                                            <textarea class="form-control" id="message" name="message" rows="4" required style="border: 1px solid #dee2e6; transition: border-color 0.15s ease-in-out;" onfocus="this.style.borderColor='#162750'" onblur="this.style.borderColor='#dee2e6'"></textarea>
+                                            <textarea class="form-control" id="message" name="message"placeholder="please type your message here" rows="4" required style="border: 1px solid #dee2e6; transition: border-color 0.15s ease-in-out;" onfocus="this.style.borderColor='#162750'" onblur="this.style.borderColor='#dee2e6'"></textarea>
                                         </div>
                                     </div>
               
@@ -1079,13 +1079,12 @@
                 .then(async (response) => {
                     let data = await response.json();
                     if (response.status == 200) {
-                        submitBtn.innerHTML = '✅ Message Sent Successfully!';
+                        submitBtn.innerHTML = '✅ Form Submitted Successfully!';
                         submitBtn.style.backgroundColor = '#f9f9f9';
                         submitBtn.style.color = '#162750';
       
                         e.target.reset();
       
-                        // Trigger the download of the PDF after successful form submission
                         window.location.href = 'images/Mangal-Level-Up-Presenter.pdf'; // Replace with the actual URL of the PDF file
                     } else {
                         submitBtn.innerHTML = data.message || '❌ Submission Failed';
@@ -1098,7 +1097,6 @@
                     submitBtn.style.backgroundColor = '#ffc107';
                 })
                 .finally(() => {
-                    // Reset button after 3 seconds
                     setTimeout(() => {
                         submitBtn.innerHTML = 'Send Message';
                         submitBtn.style.backgroundColor = '#162750';

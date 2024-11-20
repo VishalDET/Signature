@@ -106,7 +106,7 @@ Table of content:
   background: -webkit-linear-gradient(var(--bg-gradient-1)) !important;
   background: linear-gradient(var(--bg-gradient-1)) !important;
 }
-.bg-light{background: var(--bg-light) !important;}
+.bg-light{background: rgba(22,39,80,0.1) !important;}
 .rounded-1{
   border-radius: var(--rounded-1) !important;
   -moz-border-radius: var(--rounded-1) !important;
@@ -21302,4 +21302,9 @@ border-radius:20px 0 0 20px;
 }
 .num-section{
   padding: 20px 0;
+}
+
+#submitBtn:focus{
+  transition: none !important;
+  transform: none !important;
 }
