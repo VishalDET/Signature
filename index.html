@@ -10,6 +10,10 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
     <meta content="" name="keywords" >
     <meta content="" name="Mangal Build Home" >
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js"></script>
+
     <!-- CSS Files
     ================================================== -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
@@ -50,168 +54,10 @@
                             </div>
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
-                                    <li><a class="menu-item" href="#about">About</a>
-                                        <!-- <ul class="mega">
-                                            <li>
-                                                <div class="container">
-                                                    <div class="sb-menu p-4">
-                                                        <div class="row g-3">
-                                                            <div class="col-lg-1-5 col-md-4 text-center">
-                                                                <div class="relative hover text-center overflow-hidden soft-shadow rounded-5px">
-                                                                    <img src="images/demo/homepage-1.jpg" class="w-100 relative hover-scale-1-1" alt="">
-
-                                                                    <div class="abs abs-centered w-70 z-2 hover-op-1">
-                                                                        <a class="btn-main mb-2" href="index.html">Multipage</a>
-                                                                        <a class="btn-main" href="onepage-homepage-main.html">One Page</a>
-                                                                    </div>
-                                                                </div>                            
-                                                                <h5 class="mt-3 mb-1">Main Demo</h5>                          
-                                                            </div>
-                                                            
-                                                            <div class="col-lg-1-5 col-md-4 text-center">
-                                                                <div class="relative hover text-center overflow-hidden soft-shadow rounded-5px">
-                                                                    <a href="homepage-bold.html">
-                                                                        <img src="images/demo/homepage-7.jpg" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>                            
-                                                                <h5 class="mt-3 mb-1 new">Bold</h5>                          
-                                                            </div>
-
-                                                            <div class="col-lg-1-5 col-md-4 text-center">
-                                                                <div class="relative hover text-center overflow-hidden soft-shadow rounded-5px">
-                                                                    <a href="homepage-bold-2.html">
-                                                                        <img src="images/demo/homepage-8.jpg" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>                            
-                                                                <h5 class="mt-3 mb-1 new">Bold 2</h5>                          
-                                                            </div>
-
-                                                            <div class="col-lg-1-5 col-md-4 text-center">
-                                                                <div class="relative hover text-center overflow-hidden soft-shadow rounded-5px">
-                                                                    <img src="images/demo/homepage-6.jpg" class="w-100 relative hover-scale-1-1" alt="">
-
-                                                                    <div class="abs abs-centered w-70 z-2 hover-op-1">
-                                                                        <a class="btn-main mb-2" href="homepage-modern-2.html">Light</a>
-                                                                        <a class="btn-main" href="homepage-modern-2-dark.html">Dark</a>
-                                                                    </div>
-                                                                </div>                            
-                                                                <h5 class="mt-3 mb-1 new">Modern 2</h5>                          
-                                                            </div>
-
-                                                            <div class="col-lg-1-5 col-md-4 text-center">
-                                                                <div class="relative hover text-center overflow-hidden soft-shadow rounded-5px">
-                                                                    <a href="homepage-beach-resort.html">
-                                                                        <img src="images/demo/homepage-3.jpg" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>                            
-                                                                <h5 class="mt-3 mb-1">Beach Resort</h5>                          
-                                                            </div>
-
-                                                            <div class="col-lg-1-5 col-md-4 text-center">
-                                                                <div class="relative hover text-center overflow-hidden soft-shadow rounded-5px">
-                                                                    <a href="homepage-city-apartment.html">
-                                                                        <img src="images/demo/homepage-4.jpg" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>                            
-                                                                <h5 class="mt-3 mb-1">City Apartment</h5>                          
-                                                            </div>
-
-                                                            <div class="col-lg-1-5 col-md-4 text-center">
-                                                                <div class="relative hover text-center overflow-hidden soft-shadow rounded-5px">
-                                                                    <a href="homepage-mountain-hotel.html">
-                                                                        <img src="images/demo/homepage-2.jpg" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>                            
-                                                                <h5 class="mt-3 mb-1">Mountain Hotel</h5>                          
-                                                            </div>
-
-                                                            <div class="col-lg-1-5 col-md-4 text-center">
-                                                                <div class="relative hover text-center overflow-hidden soft-shadow rounded-5px">
-                                                                    <a href="homepage-modern.html">
-                                                                        <img src="images/demo/homepage-5.jpg" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>                            
-                                                                <h5 class="mt-3 mb-1">Modern</h5>                          
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>                                                
-                                            </li>
-                                        </ul> -->
-                                    </li>
-                                    <li><a class="menu-item" href="#config">Configration</a>
-                                        <!-- <ul class="mega">
-                                            <li>
-                                                <div class="container">
-                                                    <div class="sb-menu p-4">
-                                                        <div class="row g-3">
-                                                            <div class="col-lg-3">
-                                                                <h4>Rooms</h4>
-                                                                <ul class="no-bg">
-                                                                    <li><a href="rooms.html">All Rooms Default</a></li>
-                                                                    <li><a href="rooms-style-2.html">All Rooms Style 2</a></li>
-                                                                    <li><a href="rooms-style-3.html">All Rooms Style 3</a></li>
-                                                                    <li><a href="room-single.html">Single Room</a></li>
-                                                                    <li><a href="room-single-style-2.html">Single Room Style 2</a></li>
-                                                                </ul>                     
-                                                            </div>
-                                                            <div class="col-lg-3 text-center">
-                                                                <div class="relative hover text-center overflow-hidden soft-shadow rounded-5px">
-                                                                    <a href="room-single.html">
-                                                                        <div class="d-label">
-                                                                            Best Seller
-                                                                        </div>
-                                                                        <img src="images/form/2.jpg" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-
-                                                                    <div class="abs w-100 h-100 start-0 top-0 hover-bg-color"></div>
-                                                                </div>                            
-                                                                <h5 class="mt-3 mb-1">Deluxe Room</h5>                          
-                                                            </div>
-
-                                                            <div class="col-lg-3 text-center">
-                                                                <div class="relative hover text-center overflow-hidden soft-shadow rounded-5px">
-                                                                    <a href="room-single.html">
-                                                                        <div class="d-label">
-                                                                            Best Seller
-                                                                        </div>
-                                                                        <img src="images/form/4.jpg" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-
-                                                                    <div class="abs w-100 h-100 start-0 top-0 hover-bg-color"></div>
-                                                                </div>                            
-                                                                <h5 class="mt-3 mb-1">Family Suite</h5>                          
-                                                            </div>
-
-                                                            <div class="col-lg-3 text-center">
-                                                                <div class="relative hover text-center overflow-hidden soft-shadow rounded-5px">
-                                                                    <a href="room-single.html">
-                                                                        <div class="d-label">
-                                                                            Featured
-                                                                        </div>
-                                                                        <img src="images/form/6.jpg" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-
-                                                                    <div class="abs w-100 h-100 start-0 top-0 hover-bg-color"></div>
-                                                                </div>                            
-                                                                <h5 class="mt-3 mb-1">Presidential Suite</h5>                          
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>                                                
-                                            </li>
-                                        </ul> -->
-                                    </li>
+                                    <li><a class="menu-item" href="#about">About</a></li>
+                                    <li><a class="menu-item" href="#config">Configration</a></li>
                                     <li><a class="menu-item" href="#amenities">Amenities</a></li>
-                                    <li><a class="menu-item" href="#gallary">Gallery</a>
-                                        <!-- <ul>
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="facilities.html">Facilities</a></li>
-                                            <li><a href="special-offers.html">Offers</a></li>
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                            <li><a href="gallery-carousel.html">Gallery Carousel</a></li>
-                                        </ul> -->
-                                    </li>
+                                    <li><a class="menu-item" href="#gallary">Gallery</a></li>
                                     <!-- <li><a class="menu-item" href="#updates">Updates</a></li> -->
                                     <li><a class="menu-item" href="#contact">Contact</a></li>
                                 </ul>
@@ -250,7 +96,7 @@
                                             <div class="col-lg-8 offset-lg-2 text-center">     
                                                 <div class="sw-text-wrapper">
                                                     
-                                                    <h1 class="slider-title mb-4">Experience Luxury in the Heart of Vile Parle</h1> 
+                                                    <h1 class="slider-title mb-4">Experience Luxury in <br/>the Heart of Vile Parle</h1> 
                                                         <p class="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Indulge in the perfect blend of luxury, comfort, and convenience at Signature. Ideally located in the vibrant heart of Vile Parle, our residences offer an unparalleled living experience, where every detail is designed for your utmost satisfaction.</p>
                                                     <div class="spacer-30"></div>
                                                 </div>
@@ -291,7 +137,7 @@
                                                             <i class="icofont-star"></i>
                                                         </span>
                                                     </div> -->
-                                                    <h1 class="slider-title mb-4">Experience Luxury Like Never Before</h1>
+                                                    <h1 class="slider-title mb-4">Experience Luxury Like <br/> Never Before</h1>
                                                     <p class="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Immerse yourself in unparalleled luxury, where sophisticated design, exceptional comfort, and world-class craftsmanship come together for a truly unique experience.</p>
                                                 </div>
                                             </div>
@@ -330,7 +176,7 @@
                                                         </span>
                                                     </div> -->
                                                     <h1 class="slider-title mb-4">Garden For Everyone</h1>
-                                                        <p class="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Embrace the beauty of nature with our thoughtfully designed gardens at Signature. A serene space for all, offering lush greenery and a peaceful retreat right in the heart of Vile Parle East, Mumbai.</p>
+                                                    <p class="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Embrace the beauty of nature with our thoughtfully designed gardens at Signature. A serene space for all, offering lush greenery and a peaceful retreat right in the heart of Vile Parle East, Mumbai.</p>
                                                  <div class="spacer-30"></div>
                                                 </div>
                                             </div>
@@ -411,7 +257,7 @@
                             <div class="relative wow fadeInUp" data-wow-delay=".3s">   
                                 <div class="abs top-0 w-100">
                                     <div class="shape-mask-1 jarallax">
-                                        <img src="images/signature/Mangal Amrapali-Straight.jpg" class="jarallax-img" alt="">
+                                        <img src="images/signature/Mangal Ambrapali_010.jpg" class="jarallax-img object-position-left" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -419,11 +265,11 @@
 
                         <div class="col-lg-4 text-center">
                             <div class="wow scaleIn">
-                                <div class="subtitle id-color mb-3">Welcome To Mangal Signature</div>
+                                <div class="subtitle id-color mb-3">Welcome To Signature by Mangal </div>
                                 <h2 class="wow fadeInUp">Exceptional Luxury in Vile Parle East</h2>
 
                                 <div class="text-center wow fadeInUp" data-wow-delay=".5s">
-                                    <h4 class="fw-bold mb-1">6 Floors || 6 Wings</h4>
+                                    <h4 class="fw-bold mb-1"> 6 Wings</h4>
                                     <!-- <div class="de-rating-ext fs-18">
                                         <span class="d-stars">
                                             <i class="icofont-star"></i>
@@ -433,7 +279,7 @@
                                             <i class="icofont-star"></i>
                                         </span>
                                     </div> -->
-                                    <span class="d-block fs-14 mb-0">Complition By Year 2027</span>
+                                    <!-- <span class="d-block fs-14 mb-0">Complition By Year 2027</span> -->
                                 </div>
                             </div>
                         </div>
@@ -442,7 +288,7 @@
                             <div class="relative wow fadeInUp" data-wow-delay=".3s">                                
                                 <div class="abs top-0 w-100">
                                     <div class="shape-mask-1 jarallax">
-                                        <img src="images/signature/Signature-Lobby_01.jpg" class="jarallax-img object-top" alt="">
+                                        <img src="images/signature/Signature-Lobby_01.jpg" class="jarallax-img object-contain" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -451,7 +297,7 @@
 
                     <div class="spacer-double"></div>
 
-                    <div class="row g-4 relative z-2">
+                    <div class="row g-4 relative z-2 mt-5">
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                             <div class="relative p-4 bg-white border-grey">
                                 <span class="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
@@ -535,7 +381,7 @@
                     <div class="row g-4">
                         <div class="col-lg-8 offset-lg-2 text-center">
                             <div class="subtitle id-color wow fadeInUp mb-3">LUXURY Apartments</div>
-                            <h2 class="wow fadeInUp">Configration</h2>
+                            <h2 class="wow fadeInUp">Configuration</h2>
                         </div>
                         
                         <div class="col-lg-12">
@@ -554,13 +400,13 @@
                                             </div>
                                             <div class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
                                             <div class="abs z-2 bottom-0 mb-3 mx-3  text-black w-100 text-start hover-op-0">
-                                                <h3 class="mb-0 fs-20 fs-lg-20" style="color: #000000 !important; font-size: 14px;">2BHK</h3>
-                                                <div class="text-start fs-12">
+                                                <h3 class="mb-0 fs-20 fs-lg-30" style="color: #000000 !important; ">2BHK</h3>
+                                                <!-- <div class="text-start fs-12">
                                                     <span class="">
                                                         APARTMENT
                                                     </span>
                                                     
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
                                         </div>
@@ -576,13 +422,13 @@
                                             </div>
                                             <div class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
                                             <div class="abs z-2 bottom-0 mb-3 mx-3  text-black w-100 text-start hover-op-0">
-                                                <h3 class="mb-0 fs-20 fs-lg-20" style="color: #000000 !important; font-size: 14px;">3BHK</h3>
-                                                <div class="text-start fs-12">
+                                                <h3 class="mb-0 fs-20 fs-lg-30" style="color: #000000 !important;">3BHK</h3>
+                                                <!-- <div class="text-start fs-12">
                                                     <span class="">
                                                         APARTMENT
                                                     </span>
                                                     
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
                                         </div>
@@ -598,13 +444,13 @@
                                             </div>
                                             <div class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
                                             <div class="abs z-2 bottom-0 mb-3 mx-3  text-black w-100 text-start hover-op-0">
-                                                <h3 class="mb-0 fs-20 fs-lg-20" style="color: #000000 !important; font-size: 14px;">4BHK</h3>
-                                                <div class="text-start fs-12">
+                                                <h3 class="mb-0 fs-20 fs-lg-30" style="color: #000000 !important; ">4BHK</h3>
+                                                <!-- <div class="text-start fs-12">
                                                     <span class="">
                                                         APARTMENT
                                                     </span>
                                                     
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
                                         </div>
@@ -620,13 +466,13 @@
                                             </div>
                                             <div class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
                                             <div class="abs z-2 bottom-0 mb-3 mx-3  text-black w-100 text-start hover-op-0">
-                                                <h3 class="mb-0 fs-20 fs-lg-20" style="color: #000000 !important; font-size: 14px;">5BHK</h3>
-                                                <div class="text-start fs-12">
+                                                <h3 class="mb-0 fs-20 fs-lg-30" style="color: #000000 !important;">5BHK</h3>
+                                                <!-- <div class="text-start fs-12">
                                                     <span class="">
                                                         APARTMENT
                                                     </span>
                                                     
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
                                         </div>
@@ -917,7 +763,7 @@
                 </div>
             </section> -->
 
-            <section class="bg-white position-relative overflow-visible py-5" id="contact">
+           <section class="bg-white position-relative overflow-visible py-5" id="contact">
                 <div class="position-absolute w-100 h-100 border-bottom border-4" style="background: url('images/signature/Signature-Garden.jpg') center center/cover fixed; top: 0; left: 0; z-index: 1; border-color: #162750;"></div>
                 <div class="container position-relative z-2 mt-5">
                     <div class="row justify-content-center ">
@@ -985,8 +831,10 @@
                         </div>
                     </div>
                 </div>
-              </section>
+              </section> 
             
+
+
         </div>
         <!-- content close -->
         <!-- <section class="bg-white py-3 px-2">
@@ -1008,13 +856,15 @@
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-12">
-                        <div class="d-lg-flex align-items-center justify-content-between text-center g-10">
+                        <div class="d-lg-flex align-items-start justify-content-between text-center g-10">
                             <div class="col-md-4 text-start mb-4 mb-md-0">
                                 <img src="images/Buildhome-Logo-w.png" class="w-30">
-                                <h3 class="fs-20">Mangal Build Home Pvt Ltd </h3>
-                                24, Jai Hind Cottage, Shahaji Raje Road,
-                                Vile Parle East, Mumbai - 400057<br>
+                                <!-- <h3 class="fs-20">Mangal Build Home Pvt Ltd </h3> -->
+                                <p><i class="fa-solid fa-location-dot"></i> <strong>Sales Office: </strong> Mangal Build Home, 24, Jai Hind Cottage, Shahaji Raje Road, Vile Parle East, Mumbai - 400057 &nbsp;<a class="rounded-3 text-decoration-none bg-white text-black px-2" href="https://maps.app.goo.gl/GTrVdMXu5Xc3ubt96" target="_blank">Get Direction</a></p>
+                                <p><i class="fa-solid fa-location-dot"></i> <strong>Site: </strong> Signature by Mangal,Subhash Road, Vile Parle East, Mumbai - 400057 &nbsp;<a class="rounded-3 text-decoration-none bg-white text-black px-2" href="https://maps.app.goo.gl/GTrVdMXu5Xc3ubt96" target="_blank">Get Direction</a></p>
+                                <br>
                             </div>
+                            
                             <div class="col-md-4 text-start text-md-center mb-4 mb-md-0">
                                 <img src="images/Signature logo White.png" class="w-200px" alt=""><br>
                                 <div class="social-icons mb-sm-30 mt-30 mt-4">
@@ -1024,16 +874,24 @@
                                     <!-- <a href="#"><i class="fa-brands fa-youtube"></i></a> -->
                                 </div>
                             </div>
-                            <div class="col-md-4 text-start text-md-end">
+                            <div class="col-md-4 text-start text-md-end mb-4 mb-md-0">
                                 <h3 class="fs-20">Contact Us</h3>
-                               <a href="tel:+918928165592"> +91 8928165592</a><br>
-                                <a href="mailto:sales@mangalbuildhome.com">sales@mangalbuildhome.com</a>
+                                <a href="tel:02242461300" class="text-start">
+                                    <i class="fa-solid fa-phone-alt"></i> 02242461300
+                                </a><br/>
+                                <a href="tel:+918976547654" class="text-start">
+                                    <i class="fa-solid fa-phone-alt"></i> +91 8976547654
+                                </a>
+                                <br>
+                                <a href="mailto:sales@mangalbuildhome.com" class="text-start items-center">
+                                    <i class="fa-solid fa-envelope"></i> sales@mangalbuildhome.com
+                                </a>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="subfooter">
+            <div class="subfooter mt-0>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
@@ -1043,6 +901,7 @@
                 </div>
             </div>
         </footer>
+        
         <!-- footer close -->
     </div>
     <a href="https://wa.me/918928165592" class="whatsapp-btn" target="_blank" style="position: fixed; bottom: 5rem; right: 20px; background: #25d366; color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 1000;">
@@ -1056,6 +915,25 @@
     <script src="js/swiper.js"></script>
     <script src="js/custom-marquee.js"></script>
     <script src="js/custom-swiper-2.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCyUPZmDLNggAoJmX6LVThmFKjTgCH4fFc",
+          authDomain: "buildhome-385b2.firebaseapp.com",
+          projectId: "buildhome-385b2",
+          storageBucket: "buildhome-385b2.firebasestorage.app",
+          messagingSenderId: "196305538177",
+          appId: "1:196305538177:web:40f99721c54afc09651180"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
     <script>
         document.getElementById('contactForm').addEventListener('submit', async (e) => {
             e.preventDefault();
