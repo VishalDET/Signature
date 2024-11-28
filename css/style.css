@@ -21312,9 +21312,9 @@ border-radius:20px 0 0 20px;
   object-position: left top; /* Position the image at the top-left corner */
 }
 
-@media (min-width: 992px) and (max-width:1480px) {
+@media (min-width: 992px) and (max-width:1560px) {
   h1.slider-title{ 
-   font-size: 35px;
+   font-size: 38px;
    text-wrap: wrap;
    text-align: center;
   }
