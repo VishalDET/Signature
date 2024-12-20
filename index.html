@@ -213,39 +213,40 @@
             <div class="bg-signature text-light" id="amenities">
                 <div class="container">
                     <div class="row g-4 align-items-center">
-                        <div class="col-lg-9">
+                        <div class="col-lg-12">
                             <div class="row g-4 align-items-center">
                                 <div class="col-md-3 text-lg-start text-center">
                                     <h3 class="mb-0"><img src="images/signature/Signature logo1WEB.jpg" class="w-90"></h3>
                                 </div>
 
-                                <div class="col-md-6 text-lg-start text-center pt-3">
+                                <div class="col-md-3 text-lg-start text-center pt-3">
                                     <div class="text-center signature-color">
                                         <h6 class="mb-1">Completion Time</h6>
                                         <p class="bg-focus-color text-white fs-20 text-right text-center mt-2">DEC 2024 - MAR 2027</p>
                                     </div>
                                 </div>
                                 
-                                <!-- <div class="col-md-3 text-lg-start text-center pt-3">
-                                    <div class="text-center signature-color">
-                                        <h6 class="mb-1">Floor / Stories</h6>
-                                        <p class="bg-focus-color text-white fs-20 text-right text-center mt-2">06</p>
-                                    </div>
-                                </div> -->
                                 <div class="col-md-3 text-lg-start text-center pt-3">
+                                    <div class="text-center signature-color">
+                                        <h6 class="mb-1">RERA CERTIFIED</h6>
+                                        <p class="bg-focus-color text-white fs-20 text-right text-center mt-2">P51800078445</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 text-lg-start text-center pt-3">
                                     <div class="text-center signature-color">
                                         <h6 class="mb-1">Wings</h6>
                                         <p class="bg-focus-color text-white fs-20 text-right text-center mt-2">06</p>
                                     </div>
                                 </div>
+                                <div class="col-lg-2 text-lg-end text-center">
+                                    <div class="text-center signature-color">
+                                        <h6 class="mb-2">I'm Interested</h6>
+                                        <a class="btn-signature fs-16 text-white border-white px-3 py-1" href="#contact" >Contact Sales</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 text-lg-end text-center">
-                            <div class="text-center signature-color">
-                                <h6 class="mb-2">I'm Interested</h6>
-                                <a class="btn-signature fs-16 text-white border-white px-3 py-1" href="#contact" >Contact Sales</a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -865,16 +866,89 @@
                         </div>
                     </div>
                 </div>
-              </section> 
+            </section> 
+            
+            <!-- Modal Structure -->
+            <div id="modal" class="modal">
+                <div class="modal-content card p-4 bg-white w-96 form-card">
+                    <!-- Close Button -->
+                    <span class="close-btn" onclick="closeModal()">
+                        <i class="fas fa-times"></i>
+                    </span>
+            
+                    <div class="text-center mb-2">
+                        <h4 class="subtitle id-color fadeInUp">
+                            <strong>Get a Call from us</strong>
+                        </h4>
+                        <h2 class="">Connect with us</h2>
+                    </div>
+            
+                    <form action="https://api.web3forms.com/submit" method="POST" class="needs-validation" id="contactForm">
+                        <input type="hidden" name="access_key" value="e9b18151-0672-411c-b78c-439cc0819dc0">
+            
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-bold">Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Please Enter your name" required style="border: 1px solid #dee2e6; transition: border-color 0.15s ease-in-out;" onfocus="this.style.borderColor='#162750'" onblur="this.style.borderColor='#dee2e6'">
+                            </div>
+                        </div>
+            
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required style="border: 1px solid #dee2e6; transition: border-color 0.15s ease-in-out;" onfocus="this.style.borderColor='#162750'" onblur="this.style.borderColor='#dee2e6'">
+                            </div>
+                        </div>
+            
+                        <div class="mb-3">
+                            <label for="phone" class="form-label fw-bold">Phone Number</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" minlength="10" maxlength="10" required style="border: 1px solid #dee2e6; transition: border-color 0.15s ease-in-out;" onfocus="this.style.borderColor='#162750'" onblur="this.style.borderColor='#dee2e6'">
+                            </div>
+                        </div>
+            
+                        <div class="mb-4">
+                            <label for="message" class="form-label fw-bold">Message</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-comment"></i>
+                                </span>
+                                <textarea class="form-control" id="message" name="message" placeholder="please type your message here" rows="4" required style="border: 1px solid #dee2e6; transition: border-color 0.15s ease-in-out;" onfocus="this.style.borderColor='#162750'" onblur="this.style.borderColor='#dee2e6'"></textarea>
+                            </div>
+                        </div>
+            
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <input type="hidden" name="from_name" value="Signature Website">
+                        <input type="hidden" name="subject" value="Signature Query">
+            
+                        <button type="submit" class="btn w-100 py-3" style="background-color: #162750; color: white;" id="submitBtn" onclick="this.style.height='10px !important'">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
             
 
 
         </div>
         <!-- content close -->
-        <!-- <section class="bg-white py-3 px-2">
+        <section class="bg-white py-3 px-2">
             <div class="container">
                 <div class="bg-white p-4 rounded shadow-sm" style="background-image: url('img/bg/1.png'); background-size: cover;">
-                    <h2 class="h4 font-weight-bold text-dark mb-3">Notice</h2>
+                    <div class="mb-3 d-flex justify-content-between">
+                        <h2 class="h4 font-weight-bold text-dark ">Notice</h2>
+
+                        <small> <a href="Certificate339596.pdf" target="_blank">View RERA Certificate</a></small>
+                        </div>
                         <div class="small text-muted mt-3">
                             <strong>Disclaimer:</strong> The information provided here is intended for general informational purposes only and may be subject to change. Please verify all details with the appropriate sources before taking any action. For specific sales details or queries, we recommend connecting with our dedicated sales team for accurate and up-to-date information. Please note that the property images shown are artistic representations and the final outcome may vary from these depictions. Our property is in full compliance with RERA <a href="https://maharera.maharashtra.gov.in/" class="text-danger text-decoration-underline" target="_blank">(Real Estate Regulatory Authority)</a> regulations. We encourage you to visit the official RERA website for more comprehensive details and assurances regarding the project.
                          </div>
@@ -883,7 +957,7 @@
                  </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
         <!-- footer begin -->
         <footer class="text-light section-dark">
@@ -949,25 +1023,28 @@
     <script src="js/swiper.js"></script>
     <script src="js/custom-marquee.js"></script>
     <script src="js/custom-swiper-2.js"></script>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyCyUPZmDLNggAoJmX6LVThmFKjTgCH4fFc",
-          authDomain: "buildhome-385b2.firebaseapp.com",
-          projectId: "buildhome-385b2",
-          storageBucket: "buildhome-385b2.firebasestorage.app",
-          messagingSenderId: "196305538177",
-          appId: "1:196305538177:web:40f99721c54afc09651180"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-      </script>
+    <script>
+        function openModal() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "block"; // Show the modal
+        document.body.classList.add("no-scroll"); // Disable body scroll
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none"; // Hide the modal
+            document.body.classList.remove("no-scroll"); // Enable body scroll
+            }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                openModal(); 
+            }, 3500); 
+        });
+        
+    </script>
+    
+    
     <script>
         document.getElementById('contactForm').addEventListener('submit', async (e) => {
             e.preventDefault();
